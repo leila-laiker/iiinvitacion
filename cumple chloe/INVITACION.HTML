@@ -1,0 +1,50 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Invitación de Cumpleaños - Chloe</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <h1>¡Estás invitado al cumpleaños de Chloe!</h1>    
+    <p>¡Chloe cumple 6 años!</p>  
+    <p><strong>Fecha:</strong> 20 de octubre</p>  
+    <p><strong>Hora:</strong> Desde las 18:00 hasta las 22:00</p>  
+    <p>¡No faltes! Será una celebración increíble.</p>  
+
+    <div id="countdown">  
+        <h2>Cuenta atrás hasta la fiesta:</h2>  
+        <div id="countdown-timer" aria-live="polite">  
+            <span id="days"></span> Días  
+            <span id="hours"></span> Horas  
+            <span id="minutes"></span> Minutos  
+            <span id="seconds"></span> Segundos  
+        </div>  
+    </div>  
+
+    <script>  
+        // Función de cuenta regresiva  
+        const targetDate = new Date("2024-10-20T18:00:00").getTime();  
+        const countdownTimer = setInterval(function() {  
+            const now = new Date().getTime();  
+            const distance = targetDate - now;  
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));  
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));  
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);  
+
+            document.getElementById("days").innerHTML = days;  
+            document.getElementById("hours").innerHTML = hours;  
+            document.getElementById("minutes").innerHTML = minutes;  
+            document.getElementById("seconds").innerHTML = seconds;  
+
+            if (distance < 0) {  
+                clearInterval(countdownTimer);  
+                document.getElementById("countdown-timer").innerHTML = "¡La fiesta ha comenzado!";  
+            }  
+        }, 1000);  
+    </script>  
+</body>  
+</html>

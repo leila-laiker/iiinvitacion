@@ -1,0 +1,49 @@
+body {  
+    font-family: 'Arial', sans-serif;  
+    background-color: #f7e6ff;  
+    background-image: url('fotos/6f3e488aa3231e4800bce78a4c64c24a.jpg'); /* URL de imagen */  
+    background-size: cover; /* Asegúrate de que la imagen cubra todo el fondo */  
+    background-repeat: no-repeat; /* No repetir la imagen */  
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */  
+    color: #ffffff;  
+    text-align: center;  
+    margin: 0;  
+    padding: 20px;  
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la vista */  
+}  
+
+h1 {  
+    color: #ff66b2;  
+    font-size: 2.5em; /* Tamaño de fuente del encabezado */  
+    margin-bottom: 15px; /* Espacio debajo del encabezado */  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega sombra al texto para mejor legibilidad sobre el fondo */  
+}  
+
+.birthday-img {  
+    max-width: 100%;  
+    height: auto;  
+    border-radius: 10px;  
+    margin-bottom: 20px; /* Espacio debajo de la imagen */  
+}  
+
+#countdown {  
+    margin-top: 20px;  
+    position: relative; /* Asegura que la posición se pueda ajustar */  
+    z-index: 1; /* Eleva la posición del conteo sobre el fondo */  
+}  
+
+#countdown-timer {  
+    font-size: 24px;  
+    margin-top: 10px;  
+    color: #fff; /* Color blanco para el texto */  
+}  
+
+#countdown-timer span {  
+    display: inline-block;  
+    min-width: 50px;  
+    padding: 10px;  
+    background-color: rgba(255, 102, 178, 0.8); /* Color con algo de transparencia */  
+    color: #fff;  
+    border-radius: 5px;  
+    margin: 5px;  
+}
